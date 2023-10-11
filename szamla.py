@@ -1,3 +1,5 @@
+import rendeles
+
 def jelekkelkiiras(jel, db):
     print(jel * db)
 

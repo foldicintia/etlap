@@ -18,7 +18,8 @@ etlap.cim("JÓ ÉTVÁGYAT!", etlap_meret)
 
 import rendeles
 
-rendeles.rendeles()
+rendeles.rendeles("1. Gulyás leves", "1800 Ft", "2. Tojás leves", "1400 Ft", "1. Lasagne", "2000 Ft","2. Rizottó", "1800 Ft")
+
 
 
 
