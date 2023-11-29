@@ -1,23 +1,46 @@
 import szamla
 
-def rendeles(l1, l1_ar,l2, l2_ar, f1, f1_ar, f2, f2_ar):
-    valasztott_leves=""
-    valasztott_foetel=""
-    v_l_ar=0
-    v_f_ar=0
+leves= ["Gulyás leves","Tojás leves"]
+leves_ar= [1800,1400]
+foetel= ["Lasagne", "Rizottó"]
+foetel_ar= [2000,1800]
 
+
+def rendeles(etel, etel_ar):
+    valasztott_etelek: list = [] #append
     kerdes1: str = input("Kér levest (I/N)?")
+    while not (kerdes1 == "I" or kerdes1 == "N"):
+        print("Hiba! Csak I / N válasz adható meg")
+        str = input("Kér levest (I/N)?")
+    if kerdes1 == "I":
+        kerdes2: str = input("Melyik levest kéri (1/2)?")
+        if kerdes2 == "1":
+            valasztott_etelek.append(leves[0])
+        elif kerdes2 == "2":
+            valasztott_etelek.append(leves[1])
+    elif kerdes1 == "N":
+        kerdes3: str = input("Kér főételt I/N?")
+        while not (kerdes3 == "I" or kerdes3 == "N"):
+            print("Hiba! Csak I / N válasz adható meg")
+            kerdes3: str = input("Kér főételt I/N?")
+        if kerdes3 == "I":
+            kerdes4: str = input("Melyik levest kéri?")
+            if kerdes4 == "1":
+                valasztott_etelek.append(foetel[0])
+            elif kerdes4 == "2":
+                valasztott_etelek.append(foetel[1])
 
-    if kerdes1 == "I" or kerdes1 == "i" or kerdes1 == "igen" or kerdes1 == "Igen":
-        valasz1: str = input("Melyik levest kéri (1/2)?")
-        if valasz1 == "1":
-            valasztott_leves = l1
-            v_l_ar = l1_ar
-        elif valasz1 == "2":
-            valasztott_leves = l2
-            v_l_ar = l2_ar
+    return valasztott_etelek
 
 
+
+            
+
+
+
+    return valasztott_etelek
+
+"""
     kerdes2: str = input("Kér főételt I/N?")
     if kerdes2 == "I" or "i" or "igen" or "Igen":
         valasz2: str = input("Melyik főételt kéri (1/2)?")
@@ -30,7 +53,7 @@ def rendeles(l1, l1_ar,l2, l2_ar, f1, f1_ar, f2, f2_ar):
 
 
 
-
+"""
 
 
 

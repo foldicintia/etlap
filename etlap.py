@@ -15,3 +15,5 @@ def megnevezes_osszeg(jel, szoveg, szam, jel3, etlap_meret):
     ures: str = "."
     print(f"{jel}{szoveg:>{hossz}}{ures * hossz}{szam:<{hossz}}{jel3}")
 
+def jelekkelkiiras(jel, db):
+    print(jel * db)
